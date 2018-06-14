@@ -1,0 +1,28 @@
+import xlrd
+from tkinter import *
+import hashlib
+
+class MY_GUI():
+    def __init__(self,init_window_name):
+        self.init_window_name = init_window_name
+
+
+    #設置窗口
+    def set_init_window(self):
+        self.init_window_name.title("文本處理工具_v1.2   by: 陳月白")      #窗口名
+        self.init_window_name.geometry('1068x680+10+10')                 #290 160為窗口大小，+10 +10 定義窗口彈出時的默認展示位置
+        self.init_window_name["bg"] = "pink"                            #窗口背景色，其他背景色見：blog.csdn.net/chl0000/article/details/7657887
+        self.init_window_name.attributes("-alpha",0.9)                  #虛化，值越小虛化程度越高
+
+
+def gui_start():
+    init_window = Tk()              #實例化出一個父窗口
+    ZMJ_PORTAL = MY_GUI(init_window)
+    # 設置根窗口默認屬性
+    ZMJ_PORTAL.set_init_window()
+
+    init_window.mainloop()          #父窗口進入事件循環，可以理解為保持窗口運行，否則界面不展示
+
+
+gui_start()
+

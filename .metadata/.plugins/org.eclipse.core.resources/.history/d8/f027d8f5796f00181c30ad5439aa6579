@@ -1,0 +1,18 @@
+import xlrd
+
+filename = 'test.xls'
+
+# 以xlrd打開表格給book
+book = xlrd.open_workbook(filename)
+# 獲取工作表的方法之一，用下標。
+sheel_1 = book.sheet_by_index(0)
+# 打印第一個工作表的名的方法之一。
+print("Worksheet name(s): ",book.sheet_names()[0])
+# 打印表格文件中工作表的數量
+print('book.nsheets',book.nsheets)
+# 打印工作表名方法之二和打印這個表的總行數和總列數。
+print('sheel_1.name:',sheel_1.name,'sheel_1.nrows:',sheel_1.nrows,'sheel_1.ncols:',sheel_1.ncols)
+# 打印第一個工作表中行0列1的值，用下標。
+print('A1:',sheel_1.cell_value(rowx=0,colx=1))
+# 打印單元格的另一種方法
+print('A2:',sheel_1.cell_value(0,2))

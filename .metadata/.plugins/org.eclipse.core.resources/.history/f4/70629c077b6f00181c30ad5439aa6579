@@ -1,0 +1,9 @@
+import xlrd
+from tkinter import *
+
+def gui_start():
+    init_window = Tk()        #實例化出一個父窗口
+    init_window.mainloop()    #父窗口進入事件循環，可以理解為保持窗口運行，否則界面不展示
+
+gui_start()
+
